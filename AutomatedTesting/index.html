@@ -21,7 +21,8 @@
 
     <script>
         function pow(x, n) {
-            /* function code is to be written, empty now */
+            if (n < 0) return NaN;
+            if (Math.round(n) != n) return NaN;
             return x ** n;
         }
     </script>
