@@ -6,3 +6,4 @@
 
 #### [Objects: the basics](https://javascript.info/object-basics)
 1. [Objects](https://javascript.info/object)
+2. [Object references and copying](https://javascript.info/object-copy)
