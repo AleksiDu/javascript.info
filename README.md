@@ -11,3 +11,4 @@
 4. [Object methods](https://javascript.info/object-methods)
 5. [Constructor, operator "new](https://javascript.info/constructor-new)
 6. [Optional chaining](https://javascript.info/optional-chaining)
+7. [Symbol](https://javascript.info/symbol)
