@@ -12,3 +12,4 @@
 5. [Constructor, operator "new](https://javascript.info/constructor-new)
 6. [Optional chaining](https://javascript.info/optional-chaining)
 7. [Symbol](https://javascript.info/symbol)
+8. [Object to primitive conversion](https://javascript.info/object-toprimitive)
