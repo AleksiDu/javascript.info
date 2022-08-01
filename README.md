@@ -13,3 +13,5 @@
 6. [Optional chaining](https://javascript.info/optional-chaining)
 7. [Symbol](https://javascript.info/symbol)
 8. [Object to primitive conversion](https://javascript.info/object-toprimitive)
+### [Data types](https://javascript.info/data-types)
+1. [Methods of primitives](https://javascript.info/primitives-methods)
