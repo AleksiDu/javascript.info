@@ -100,3 +100,76 @@ console.log('Interface'.toUpperCase()); // Interface
 
 // Or, if we want a single character lowercased:
 console.log('Interface'[0].toLowerCase()); // 'i'
+
+/**
+ * Searching for a substring
+ */
+console.log(">>>str.indexOf<<<");
+/* first method is str.indexOf(substr,pos).
+    It looks for the substr in str, string from the given position pos, and returns
+    the position where the match was found or -1 if nothing can be found.
+*/
+
+str = 'Widget with id as';
+console.log(str.indexOf('Widget')); // 0. because 'Widget' is found at the beginning
+console.log(str.indexOf('widget')); // -1, not found, the search is case-sensitive 
+console.log(str.indexOf("id")); // 1, "id" is found at the position 1 (..idget with id)
+
+// The optional second parameter allows us to start searching from given position
+console.log(str.indexOf('id', 2)); //12
+
+// If we're interested in all occurrences, we can run indexOf in loop:
+str = 'As sly as a fox, as strong as an ox';
+let target = 'as'; // let's look for it
+let pos = 0;
+
+while (true) {
+    let foundPos = str.indexOf(target, pos);
+    if (foundPos == -1) break;
+
+    console.log(`Found at ${foundPos}`);
+    pos = foundPos + 1; // continue the search from the next position
+}
+
+// The same algorithm can be layed out shorter:
+
+pos = -1;
+while ((pos = str.indexOf(target, pos + 1)) != -1) {
+    console.log(pos);
+}
+
+str = "Widget with id";
+
+if (str.indexOf("Widget")) {
+    console.log("We found it"); // doesn't work!
+}
+
+if (str.indexOf("Widget") != -1) {
+    console.log("We found it"); // works now!
+}
+
+// The bitwise NOT trick
+console.log(~2); // -3. the same as -(2+1)
+console.log(~1); // -2, the same as -(1+1)
+console.log(~-2); // 1, the same as -(-2+1)
+
+// As we can see, ~n is zero only if n == -1 (that’s for any 32-bit signed integer n).
+str = "Widget";
+if (~str.indexOf("Widget")) {
+    console.log('Found it!'); // works
+};
+
+/**
+ * includes, startsWith, endsWith
+ * The more modern method str.includes(substr, pos) returns true/false depending on whether str contains substr within.
+ */
+console.log("Widget with id".includes("Widget")); // true
+console.log("Hello".includes("Bye")); // false
+
+// The optional second argument of str.includes is the position to start searching from:
+console.log("Widget".includes("id")); // true
+console.log("Widget".includes("id", 3)) // false, from position 3 there is no "id"
+
+// The methods str.startsWith and str.endsWith do exactly what the say:
+console.log("Widget".startsWith("Wid")); // true, "Widget" starts with "Wid"
+console.log("Widget".endsWith("get"));  //true, "Widget" ends with "get"
