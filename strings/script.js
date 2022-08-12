@@ -78,3 +78,14 @@ console.log("str.charAt(1000)=>", str.charAt(1000)); // '' (an empty string)
 for (let char of "Hello") {
     console.log(char); // H,e,l,l,o (char becomes "H", then "e", then "l" etc)
 };
+
+/**
+ * String are immutable
+ */
+
+str = 'Hi';
+// str[0] = 'h'; // error
+// console.log(str[0]); // doesn't work
+
+str = 'h' + str[1]; // replace the string
+console.log(str);
