@@ -89,3 +89,14 @@ str = 'Hi';
 
 str = 'h' + str[1]; // replace the string
 console.log(str);
+
+/**
+ * Changing the case
+ */
+// Methods toLowerCase() and toUpperCase() change the case:
+console.log(">>>change the case<<<");
+console.log('Interface'.toLowerCase()); // interface
+console.log('Interface'.toUpperCase()); // Interface
+
+// Or, if we want a single character lowercased:
+console.log('Interface'[0].toLowerCase()); // 'i'
