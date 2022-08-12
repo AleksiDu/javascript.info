@@ -148,6 +148,7 @@ if (str.indexOf("Widget") != -1) {
     console.log("We found it"); // works now!
 }
 
+console.log(">>>The bitwise NOT trick<<<")
 // The bitwise NOT trick
 console.log(~2); // -3. the same as -(2+1)
 console.log(~1); // -2, the same as -(1+1)
@@ -163,6 +164,8 @@ if (~str.indexOf("Widget")) {
  * includes, startsWith, endsWith
  * The more modern method str.includes(substr, pos) returns true/false depending on whether str contains substr within.
  */
+console.log(">>>includes, startsWith, endsWith<<<");
+
 console.log("Widget with id".includes("Widget")); // true
 console.log("Hello".includes("Bye")); // false
 
@@ -173,3 +176,40 @@ console.log("Widget".includes("id", 3)) // false, from position 3 there is no "i
 // The methods str.startsWith and str.endsWith do exactly what the say:
 console.log("Widget".startsWith("Wid")); // true, "Widget" starts with "Wid"
 console.log("Widget".endsWith("get"));  //true, "Widget" ends with "get"
+
+/**
+ * Getting a substring
+ * There are 3 methods in JavaScript to get a substring: substring, substr and slice.
+ */
+console.log(">>>str.slice(start[, end])<<<")
+// str.slice(start[, end])
+// Returns the part of the string from start to (but not including) end.
+
+str = "stringify";
+console.log(str.slice(0, 5)); // 'strin', the substring from 0 to 5 (not including 5)
+console.log(str.slice(0, 1)); // 's', from 0 to 1, but not including 1, so only character at 0
+// If ther is no second argument, tthen slice goes till the end of string:
+console.log(str.slice(2)); // 'ringify', from the 2nd position till the end
+// begative values from start/end are also possible. They mean the position is counted from the string end:
+console.log(str.slice(-4, -1)); // 'gif'
+
+// str.substring(start [, end])
+console.log(">>>str.substring(start [, end])<<<")
+// Returns the part of the string between start and end.
+// This is almost the same as slice, but it allows start to be greater than end.
+
+// these are same from substring
+console.log(str.substring(2, 6)); // "ring"
+console.log(str.substring(6, 2)); // "ring"
+// ...but not for slice:
+console.log(str.slice(2, 6)); // "ring" (the same)
+console.log(str.slice(6, 2)); // "" (an emty string)
+// Negative arguments are (unlike slice) not supported, they are treated as 0.
+
+// str.substr(start [, length])
+console.log(">>>str.substr(start [, length]<<<");
+// Returns the part of the string from start, with the given length.
+// In contrast with the previous methods, this one allows us to specify the length instead of the ending position:
+console.log(str.substr(2, 4)); // 'ring', from 2nd position get 4 characters
+// The first argument may be negative, to count from the end:
+console.log(str.substr(-4, 2)); // 'gi', from the 4th position get 2 characters
