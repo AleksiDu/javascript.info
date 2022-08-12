@@ -1,1 +1,1 @@
-substr
+toUpperCase
