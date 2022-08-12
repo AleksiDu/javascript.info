@@ -213,3 +213,61 @@ console.log(">>>str.substr(start [, length]<<<");
 console.log(str.substr(2, 4)); // 'ring', from 2nd position get 4 characters
 // The first argument may be negative, to count from the end:
 console.log(str.substr(-4, 2)); // 'gi', from the 4th position get 2 characters
+
+/**
+ * Comparing strings
+ */
+console.log(">>> Comparing strings<<<")
+// A lowercase letter is always greater than the uppercase:
+console.log('a' > 'Z'); // true
+// Letters with diacritical makes are "out of order":
+console.log('Österreich' > 'Zealand'); // true
+
+// str.codePointAt(pos)
+// Returns the code from the character at position pos:
+
+// different case letters have different codes
+console.log("z".codePointAt(0)); // 123
+console.log("Z".codePointAt(0)); // 90
+
+// String.fromCodePoint(code)
+// Creates a character by its numeric code
+console.log(String.fromCodePoint(90)); // Z
+
+// We can also add Unicode characters by their codes using \u followed by the hex code:
+console.log('\u005a'); // Z
+
+str = '';
+
+for (let i = 65; i <= 220; i++) {
+    str += String.fromCodePoint(i);
+}
+console.log(str);
+
+// Correct comparisons
+console.log(">>>Correct comparisons<<<");
+
+console.log('Österreich'.localeCompare('Zealand')); // -1
+
+/**
+ * Internals, Unicode
+ */
+
+// Surrogate pairs
+console.log(">>>Surrogate pairs<<<");
+
+console.log('𝒳'.length); // 2, MATHEMATICAL SCRIPT CAPITAL X
+console.log('𝒳'[0]); // strange symbols...
+console.log('𝒳'[1]); // ...pieces of the surrogate pair
+
+// Note that pieces of the surrogate pair have no meaning without each other. So the alerts in the example above actually display garbage.
+
+// charCodeAt is not surrogate-pair aware, so it gives codes for parts
+console.log('𝒳'.charCodeAt(0).toString(16)); // d835, between 0xd800_and_0xdbff
+console.log('𝒳'.charCodeAt(1).toString(16)); // dcb3, between 0xdc00_and_0xdfff
+
+// Diacritical makes and normalization
+
+console.log('S\u0307'); // Ṡ)
+
+
