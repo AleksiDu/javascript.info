@@ -17,3 +17,4 @@
 1. [Methods of primitives](https://javascript.info/primitives-methods)
 2. [Numbers](https://javascript.info/number)
 3. [Strings](https://javascript.info/string)
+4. [Arrays](https://javascript.info/array)
