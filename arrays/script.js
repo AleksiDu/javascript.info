@@ -28,3 +28,28 @@ console.log("last element with 'at'=>", fruits.at(-1));
 // In the other words, arr.at(i):
 // * is exactly same as arr[i], if i>=0.
 // * for negative values of i, it steps back from the end of the array
+
+/**
+ * Methods pop/push, shift /unshift
+ * push - appends an element to the end
+ * shift - get an element from the beginning, advancing the quere, so that the 2nd element becomes the 1st.
+ * push - adds an element to the end.
+ * pop - takes an element from the end.
+ */
+
+// pop
+console.log(fruits.pop()); // remove "Pear" and log it
+console.log(fruits);  // Apple, Orange
+
+// push
+fruits.push("Pear");
+console.log(fruits); // Apple, Orange, Pear
+
+// shift
+console.log(fruits.shift()); // remove Apple and log it
+console.log(fruits); // Orange, Pear
+
+// unshift
+fruits.unshift('Apple');
+console.log(fruits); // Apple, ORange, Pear
+// Methods push and unshift can add multiple elements at once
