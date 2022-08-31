@@ -70,3 +70,13 @@ fruits = [];
 fruits[99] = 5;
 fruits.age = 25;
 console.log(fruits);
+
+/**
+ * Perfirnace
+ * Methods push/pop run fast, while shift/unshift are slow
+ */
+
+// Why is it faster to work with the end of an array than with its beginning? Let’s see what happens during the execution:
+fruits.shift(); // takes 1 element from the start
+// It’s not enough to take and remove the element with the index 0. Other elements need to be renumbered as well.
+fruits.pop(); // take 1 element from the end
