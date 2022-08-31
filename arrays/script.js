@@ -53,3 +53,20 @@ console.log(fruits); // Orange, Pear
 fruits.unshift('Apple');
 console.log(fruits); // Apple, ORange, Pear
 // Methods push and unshift can add multiple elements at once
+
+/**
+ * Internals
+ */
+
+fruits = ["Bannaba"];
+
+arr = fruits; // copy by reference (two variables reference the same array)
+console.log(arr === fruits); //true
+
+arr.push("Pear"); // modify the array by reference
+console.log(fruits); // Banana, Pear - 2 items now
+
+fruits = [];
+fruits[99] = 5;
+fruits.age = 25;
+console.log(fruits);
