@@ -72,7 +72,7 @@ fruits.age = 25;
 console.log(fruits);
 
 /**
- * Perfirnace
+ * Performance
  * Methods push/pop run fast, while shift/unshift are slow
  */
 
@@ -80,3 +80,19 @@ console.log(fruits);
 fruits.shift(); // takes 1 element from the start
 // It’s not enough to take and remove the element with the index 0. Other elements need to be renumbered as well.
 fruits.pop(); // take 1 element from the end
+
+/** 
+ * Loops
+ */
+
+arr = ["Apple", "Orange", "Pear"];
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+};
+// For arrays there is another from of loop:
+fruits = ["Apple", "Orange", "Pear"];
+// ireates over array elements
+for (let fruit of fruits) {
+    console.log("from of loop =>>", fruit);
+}
