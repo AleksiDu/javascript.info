@@ -106,3 +106,15 @@ arr = new Array("Apple", "Pear", "etc");
 arr = new Array(2); // will it create an array of [2] ?
 console.log(arr[0]); // undefined! no elements.
 console.log(arr.length); // length 2
+
+/**
+ * Multidimensional arrays
+ */
+
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+console.log(matrix[1][1]); // 5, the central element
