@@ -118,3 +118,13 @@ let matrix = [
 ];
 
 console.log(matrix[1][1]); // 5, the central element
+
+/** 
+ * toString
+ */
+
+arr = [1, 2, 3];
+console.log(arr); // 1,2,3
+console.log(String(arr) === '1,2,3'); // true
+
+console.log([] + '1'); // "1"
