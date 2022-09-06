@@ -96,3 +96,13 @@ fruits = ["Apple", "Orange", "Pear"];
 for (let fruit of fruits) {
     console.log("from of loop =>>", fruit);
 }
+
+/**
+ * new Array()
+ */
+
+arr = new Array("Apple", "Pear", "etc");
+
+arr = new Array(2); // will it create an array of [2] ?
+console.log(arr[0]); // undefined! no elements.
+console.log(arr.length); // length 2
