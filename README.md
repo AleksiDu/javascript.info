@@ -18,3 +18,4 @@
 2. [Numbers](https://javascript.info/number)
 3. [Strings](https://javascript.info/string)
 4. [Arrays](https://javascript.info/array)
+5. [Array Methods](https://javascript.info/array-methods)
