@@ -97,3 +97,19 @@ arrayLike = {
 };
 
 console.log(arr.concat(arrayLike)); // 1, 2, something, else
+
+/**
+ * Iterate: forEach
+ * The arr.forEach method allows to run a function for every element of the array.
+ */
+
+// for each element call console.log
+
+["Bilbo", "Gandalf", "Mazgul"].forEach(console.log);
+
+["Bilbo", "Gandalf", "Mazgul"].forEach((item, index, array) => {
+    console.log(`${item} is at index ${index} in ${array}`);
+})
+// The result of the function (if it returns any) is thrown away and ignored
+
+
