@@ -112,4 +112,56 @@ console.log(arr.concat(arrayLike)); // 1, 2, something, else
 })
 // The result of the function (if it returns any) is thrown away and ignored
 
+/**
+ * Search in array
+ */
+
+// indexOf/lastIndexOf and includes
+
+// arr.indexOf(item, from) - looks for item starting from index from, and returns the index where it was gound, ptherwise -1
+// arr.includes(item, from) - looks for item starting from index from, return true if found
+
+arr = [1, 0, false];
+
+console.log(arr.indexOf(0)); //1
+console.log(arr.indexOf(false)); // 2
+console.log(arr.indexOf(null)); // -1
+
+console.log(arr.includes(1)); // true
+
+let result = arr.find(function (item, index, array) {
+    // if true is returned, item is returned and ireation is stopped
+    // for falsy scenario returns undefined
+});
+
+let users = [
+    { id: 1, name: "John" },
+    { id: 2, name: "Pete" },
+    { id: 3, name: "Mary" }
+];
+
+
+let user = users.find(item => item.id == 1);
+
+console.log(user.name);
+
+// fileter
+
+result = arr.filter(function (item, index, array) {
+    // if true item is pushed to results and the iteration continiues
+    // returns emty array if nothing found
+});
+
+users = [
+    { id: 1, name: "John" },
+    { id: 2, name: "Pete" },
+    { id: 3, name: "Mary" }
+];
+
+// returns array of the first two users
+let someUsers = users.filter(item => item.id < 3);
+
+console.log(someUsers.length); // 2
+
+
 
