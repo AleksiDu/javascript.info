@@ -163,5 +163,63 @@ let someUsers = users.filter(item => item.id < 3);
 
 console.log(someUsers.length); // 2
 
+/**
+ * Transform an array
+ */
 
+//map
 
+let lengths = ["Bilbo", "Gandalf", "Nazgul"].map(item => item.length);
+console.log(lengths); // 5,7,6
+
+// sort(fn)
+
+arr = [1, 2, 15];
+
+// the method records the content of arr
+
+arr.sort();
+
+console.log(arr); // 1, 15, 2
+
+[1, -2, 15, 2, 0, 8].sort(function (a, b) {
+    console.log(a + " <> " + b);
+    return a - b;
+});
+
+arr = [1, 2, 15];
+
+arr.sort(function (a, b) { return a - b; });
+
+console.log(arr);  // 1, 2, 15
+
+// reverse
+
+arr = [1, 2, 3, 4, 5];
+arr.reverse();
+
+console.log(arr); // 5,4,3,2,1
+
+// split and join 
+
+let names = 'Bilbo, Gandalf, Nazgul';
+
+arr = names.split(', ');
+
+for (let name of arr) {
+    console.log(`A message to ${name}.`); // A message to Bilbo  (and other names)
+}
+
+arr = ['Bilbo', 'Gandalf', 'Nazgul'];
+
+let str = arr.join(';'); // glue the array into a string using ;
+
+console.log(str); // Bilbo;Gandalf;Nazgu
+
+// reduce/reduceRight
+
+arr = [1, 2, 3, 4, 5];
+
+result = arr.reduce((sum, current) => sum + current, 0);
+
+console.log(result); // 15
